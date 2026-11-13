@@ -26,14 +26,14 @@ Bu politika, GOAT PDF uygulamasında ("Uygulama") kişisel verilerin nasıl işl
 - Sunucumuz metni yanıt üretmesi için AI hizmet sağlayıcısına iletir ve yanıtı sana döndürür.
 - Sunucumuz metni ve yanıtı saklamaz. Kayıtlarında yalnızca istek bilgileri tutulur: anonim kullanıcı kimliği, hangi özellik, metin uzunluğu, kullanılan model, süre.
 - AI hizmet sağlayıcısı (Anthropic) API verileriyle model eğitmez. Kendi politikasına göre API girdilerini ve çıktılarını 30 gün içinde siler. Kullanım politikasını ihlal ettiği için işaretlenen içeriği daha uzun, en çok 2 yıl saklayabilir.
-- Günlük hakların ve maliyet takibi için anonim kullanıcı kimliğinle günlük bir sayaç tutulur: istek sayısı ve kullanılan miktar. Bu sayaç 90 gün sonra silinir.
+- AI haklarını uygulamak ve maliyeti izlemek için anonim kullanıcı kimliğinle sayaçlar tutulur: istek sayısı (ücretsiz kullanıcının toplam, Premium kullanıcının günlük) ve kullanılan miktar. Sayaçlar son değişikliklerinden 90 gün sonra silinir.
 - Bir AI yanıtını bildirirsen nedenini, yorumunu ve göndermeyi seçtiysen yanıtı 90 gün saklarız. Bunu yanıtları iyileştirmek ve kötüye kullanımı incelemek için yaparız. Belgenin metni bildirimle gönderilmez.
 
 İzni Ayarlar > AI özellikleri'nden geri alabilirsin.
 Hukuki sebep: açık rızan (KVKK m. 5/1; GDPR m. 6/1-a).
 
 **c) Anonim kullanıcı kimliği ve uygulamanın doğrulanması.** AI ve satın alma özellikleri için Firebase Authentication'da sana anonim bir kimlik oluşturulur. Bu kimlik ad ya da e-posta içermez. İsteklerin gerçekten Uygulama'dan geldiğini doğrulamak için Firebase App Check kullanılır: Android'de Play Integrity, iOS'ta App Attest ve DeviceCheck.
-Amaç: günlük hakları uygulamak, Premium'u tanımak, kötüye kullanımı önlemek.
+Amaç: AI haklarını uygulamak, Premium'u tanımak, kötüye kullanımı önlemek.
 Hukuki sebep: sözleşmenin ifası ve meşru menfaat (KVKK m. 5/2-c ve f; GDPR m. 6/1-b ve f).
 
 **d) Satın almalar.** Premium, App Store ya da Google Play üzerinden satın alınır; ödeme bilgilerin bize gelmez. Satın almayı doğrulamak ve cihazlar arasında geri yüklemek için RevenueCat kullanılır. RevenueCat'e satın alma geçmişin ve anonim kullanıcı kimliğin gider.
@@ -77,7 +77,7 @@ Bu aktarımlar KVKK m. 9 ve GDPR'ın V. bölümündeki güvencelerle yapılır: 
 ### 4. Saklama süreleri
 - Belgeler: telefonunda, sen silene kadar.
 - AI metni: sunucumuzda saklanmaz. AI hizmet sağlayıcısında en çok 30 gün; ihlal için işaretlenen içerik en çok 2 yıl.
-- Günlük AI sayaçları: 90 gün.
+- AI sayaçları: son değişiklikten 90 gün sonra.
 - AI yanıt bildirimleri: 90 gün.
 - Sunucu kayıtları (yalnızca istek bilgileri): 30 gün.
 - Kullanım istatistikleri: en çok 14 ay. Çökme raporları: 90 gün.
@@ -130,14 +130,14 @@ This policy explains how personal data is processed in the GOAT PDF app (the "Ap
 - Our server passes the text to the AI service provider to generate the answer, and returns the answer to you.
 - Our server does not keep the text or the answer. Its logs hold only request details: the anonymous user ID, which feature, text length, the model used, duration.
 - The AI service provider (Anthropic) doesn't train models on API data. Under its own policy it deletes API inputs and outputs within 30 days. Content flagged for violating its usage policy may be kept longer, for up to 2 years.
-- A daily counter is kept under your anonymous user ID for your daily allowance and cost tracking: the number of requests and the amount used. It is deleted after 90 days.
+- Counters are kept under your anonymous user ID to apply the AI allowance and track costs: the number of requests (a free user's in all, a Premium user's per day) and the amount used. They are deleted 90 days after they last change.
 - If you report an AI answer, we keep the reason, your comment and, if you chose to send it, the answer for 90 days. We use this to improve answers and review abuse. The document's text is not sent with a report.
 
 You can withdraw consent in Settings > AI features.
 Legal basis: your explicit consent (KVKK Art. 5(1); GDPR Art. 6(1)(a)).
 
 **c) Anonymous user ID and app verification.** For AI and purchases, an anonymous ID is created for you in Firebase Authentication. It contains no name or e-mail address. Firebase App Check verifies that requests really come from the App: Play Integrity on Android, App Attest and DeviceCheck on iOS.
-Purpose: enforcing daily allowances, recognizing Premium, preventing abuse.
+Purpose: enforcing AI allowances, recognizing Premium, preventing abuse.
 Legal basis: performance of the contract and legitimate interest (KVKK Art. 5(2)(c) and (f); GDPR Art. 6(1)(b) and (f)).
 
 **d) Purchases.** Premium is bought through the App Store or Google Play; we never receive your payment details. RevenueCat verifies purchases and restores them across devices. It receives your purchase history and your anonymous user ID.
@@ -181,7 +181,7 @@ These transfers rely on the safeguards in KVKK Art. 9 and Chapter V of the GDPR:
 ### 4. Retention
 - Documents: on your phone until you delete them.
 - AI text: not kept on our server. At the AI service provider, up to 30 days; content flagged for a violation, up to 2 years.
-- Daily AI counters: 90 days.
+- AI counters: 90 days after they last change.
 - Reports of AI answers: 90 days.
 - Server logs (request details only): 30 days.
 - Usage statistics: up to 14 months. Crash reports: 90 days.
