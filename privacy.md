@@ -37,6 +37,7 @@ Amaç: AI haklarını uygulamak, Premium'u tanımak, kötüye kullanımı önlem
 Hukuki sebep: sözleşmenin ifası ve meşru menfaat (KVKK m. 5/2-c ve f; GDPR m. 6/1-b ve f).
 
 **d) Satın almalar.** Premium, App Store ya da Google Play üzerinden satın alınır; ödeme bilgilerin bize gelmez. Satın almayı doğrulamak ve cihazlar arasında geri yüklemek için RevenueCat kullanılır. RevenueCat'e satın alma geçmişin ve anonim kullanıcı kimliğin gider.
+Android'de bir Premium kodu kullanırsan Premium yine RevenueCat üzerinden verilir. Aynı kodun ikinci kez kullanılmaması için sunucumuz kodu kullandığını anonim kullanıcı kimliğin ve tarihle, kodun süresi bitene kadar saklar. Kodların tahmin edilmesini önlemek için yanlış kod denemeleri iki gün tutulur.
 Hukuki sebep: sözleşmenin ifası.
 
 **e) Kullanım istatistikleri (Google Analytics for Firebase).** Uygulamanın hangi ekranlarının ve araçlarının kullanıldığını, araçların başarısını ve süresini ölçeriz. Bu ölçüm belge adı, belge metni ya da dosya yolu içermez. Firebase ayrıca cihaz bilgilerini (model, işletim sistemi, dil), bir uygulama örneği kimliğini ve IP adresinden çıkarılan yaklaşık konumu işler. Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'de istatistik tanımlayıcıları ancak onay verirsen kullanılır.
@@ -62,7 +63,7 @@ Hukuki sebep: açık rıza; kişiselleştirilmemiş reklamlar için meşru menfa
 Veriler yalnızca yukarıdaki amaçlarla, bizim adımıza hizmet veren şu sağlayıcılara aktarılır:
 - **Google:** Firebase (sunucu, kimlik, istatistik, çökme raporları, ayarlar), AdMob (reklamlar) ve ML Kit (Android'de metin tanıma ölçümleri).
 - **AI hizmet sağlayıcısı:** Anthropic, PBC (ABD).
-- **RevenueCat:** satın almalar.
+- **RevenueCat:** satın almalar ve Premium kodları.
 - **Apple ve Google:** mağaza satın almaları, kendi koşullarıyla.
 
 Verileri satmayız. Yasal bir zorunluluk olduğunda yetkili makamlara bilgi verebiliriz.
@@ -82,6 +83,7 @@ Bu aktarımlar KVKK m. 9 ve GDPR'ın V. bölümündeki güvencelerle yapılır: 
 - Sunucu kayıtları (yalnızca istek bilgileri): 30 gün.
 - Kullanım istatistikleri: en çok 14 ay. Çökme raporları: 90 gün.
 - Satın alma kayıtları: yasaların öngördüğü süre boyunca.
+- Premium kodu kullanımları: kodun süresi bitene kadar. Yanlış kod denemeleri: 2 gün.
 
 ### 5. Hakların
 KVKK m. 11 ve GDPR uyarınca şu haklara sahipsin:
@@ -141,6 +143,7 @@ Purpose: enforcing AI allowances, recognizing Premium, preventing abuse.
 Legal basis: performance of the contract and legitimate interest (KVKK Art. 5(2)(c) and (f); GDPR Art. 6(1)(b) and (f)).
 
 **d) Purchases.** Premium is bought through the App Store or Google Play; we never receive your payment details. RevenueCat verifies purchases and restores them across devices. It receives your purchase history and your anonymous user ID.
+If you use a Premium code on Android, Premium is given through RevenueCat too. So that a code can't be used twice, our server keeps a record that you used it, with your anonymous user ID and the date, until the code expires. Failed code attempts are kept for two days, so that codes can't be guessed.
 Legal basis: performance of the contract.
 
 **e) Usage statistics (Google Analytics for Firebase).** We measure which screens and tools are used, and whether tools succeed and how long they take. This never includes document names, document text or file paths. Firebase also processes device details (model, operating system, language), an app instance ID and an approximate location derived from the IP address. In the European Economic Area, the UK and Switzerland, analytics identifiers are used only with your consent.
@@ -166,7 +169,7 @@ Legal basis: consent; legitimate interest for non-personalized ads.
 Data is shared only for the purposes above, with these providers acting on our behalf:
 - **Google:** Firebase (server, identity, statistics, crash reports, settings), AdMob (ads) and ML Kit (text recognition metrics on Android).
 - **The AI service provider:** Anthropic, PBC (United States).
-- **RevenueCat:** purchases.
+- **RevenueCat:** purchases and Premium codes.
 - **Apple and Google:** store purchases, under their own terms.
 
 We don't sell data. We may disclose information to authorities where the law requires it.
@@ -186,6 +189,7 @@ These transfers rely on the safeguards in KVKK Art. 9 and Chapter V of the GDPR:
 - Server logs (request details only): 30 days.
 - Usage statistics: up to 14 months. Crash reports: 90 days.
 - Purchase records: as long as the law requires.
+- Premium code uses: until the code expires. Failed code attempts: 2 days.
 
 ### 5. Your rights
 Under KVKK Art. 11 and the GDPR you have these rights:
